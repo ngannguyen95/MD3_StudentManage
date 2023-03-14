@@ -34,14 +34,13 @@ public class Navbar {
                 case 1:
                     for (int i = 0; i < students.length; i++) {
                         if (students[i] == null) {
-                            continue;
                         } else {
                             System.out.println(students[i]);
                         }
                     }
                     break;
                 case 2:
-
+// thêm
                     System.out.println("Nhập vào tên sinh viên: ");
                     String studentName = scanner.next();
                     System.out.println("Nhập vào tuổi sinh viên: ");
@@ -64,7 +63,6 @@ public class Navbar {
                     int updateAge = scanner.nextInt();
                     for (int i = 0; i < students.length; i++) {
                         if (students[i] == null) {
-                            continue;
                         } else if (updateId - 1 == i) {
                             students[i] = new Student(i, updateName, updateAge);
                         }
@@ -76,7 +74,6 @@ public class Navbar {
                     int deleteId = scanner.nextInt();
                     for (int i = 0; i < students.length; i++) {
                         if (students[i] == null) {
-                            continue;
                         } else if (students[i].studentId == deleteId) {
                             students[i] = null;
                         }
@@ -87,11 +84,9 @@ public class Navbar {
                     Student temp;
                     for (int i = 0; i < students.length; i++) {
                         if (students[i] == null) {
-                            continue;
                         } else {
                             for (int j = i + 1; j < students.length - 1; j++) {
                                 if (students[j] == null) {
-                                    continue;
                                 } else {
                                     if (students[i].age > students[j].age) {
                                         temp = students[j];
